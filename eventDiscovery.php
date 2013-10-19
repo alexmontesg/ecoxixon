@@ -1,11 +1,17 @@
 <?php 
+$db = new mysqli('localhost', 'root', '', 'ecoxixon') or die('error with connection');
 if(isset($_POST['load_url'])) {
 	$dom = new DOMDocument;
 	$dom->loadXML(file_get_contents($_POST['data_url']));
 	$categories = $dom->getElementsByTagName('categoria');
 	$catArr = array();
+	$catInDB = array();
+	$query = $db -> query("SELECT nombre FROM categorias");
+	while($row = $query -> fetch_object()) {
+		array_push($catInDB, $row->nombre);
+	}
 	foreach ($categories as $category) {
-		if(!in_array($category->nodeValue, $catArr)) { // TODO Check not in DB already
+		if(!in_array($category->nodeValue, $catArr) && !in_array($category->nodeValue, $catInDB)) {
 			array_push($catArr, $category->nodeValue);
 		}
 	}
