@@ -2,8 +2,11 @@
 
 CREATE TABLE `users` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `user` VARCHAR(255),
+  `username` VARCHAR(255),
   `password` VARCHAR(255),
+  `role` VARCHAR(20),
+  `nombre` VARCHAR(255),
+  `apellidos` VARCHAR(255),
   `email` VARCHAR(255),
   `created` DATETIME,
   `modified` DATETIME,

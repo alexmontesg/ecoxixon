@@ -37,6 +37,11 @@ class PagesController extends AppController {
  * @var array
  */
 	public $uses = array();
+	
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('display');
+	}
 
 /**
  * Displays a view
@@ -48,6 +53,8 @@ class PagesController extends AppController {
  */
 	public function display() {
 		$path = func_get_args();
+		
+		$this->set('user', $this->Auth->user());
 
 		$count = count($path);
 		if (!$count) {
@@ -74,5 +81,6 @@ class PagesController extends AppController {
 			}
 			throw new NotFoundException();
 		}
+		
 	}
 }
