@@ -14,15 +14,19 @@ CREATE TABLE `eventos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255),
   `descripcion` TEXT,
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 );
 
 CREATE TABLE `categorias` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `localizacion` VARCHAR(255),
-  `puntuacion` DOUBLE(6.2),
+  `puntuacion` DOUBLE(6,2),
   `name` VARCHAR(255),
-  `puntos` DOUBLE(6.2),
+  `puntos` DOUBLE(6,2),
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 );
 
@@ -30,6 +34,8 @@ CREATE TABLE `usuarios_eventos` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `user_id` INT(11),
   `evento_id` INT(11),
+  `created` DATETIME,
+  `modified` DATETIME,
   PRIMARY KEY  (`id`)
 );
 
@@ -37,12 +43,6 @@ CREATE TABLE `eventos_categorias` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `evento_id` INT(11),
   `categoria_id` INT(11),
-  `created` DATETIME,
-  `modified` DATETIME,
-  `created` DATETIME,
-  `modified` DATETIME,
-  `created` DATETIME,
-  `modified` DATETIME,
   `created` DATETIME,
   `modified` DATETIME,
   PRIMARY KEY  (`id`)
