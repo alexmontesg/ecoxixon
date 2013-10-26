@@ -31,6 +31,7 @@ if (isset($_POST['load_url'])) {
 		$ecoQuality = $db -> real_escape_string($ecoQuality);
 		$query = $db -> query("INSERT INTO categorias (nombre, puntuacion) VALUES ('$category', '$ecoQuality')");
 	}
+	//FIXME $_SESSION['xml'] not available here :S :S :S
 	addEvents($db);
 }
 
@@ -42,8 +43,24 @@ function addEvents($db) {
 		$dateEnd = $db -> real_escape_string(strip_tags($event -> getElementsByTagName('dia-de-fin') -> item(0) -> nodeValue));
 		$description = $db -> real_escape_string(strip_tags($event -> getElementsByTagName('descripcion') -> item(0) -> nodeValue));
 		$localization = $db -> real_escape_string(strip_tags($event -> getElementsByTagName('localizacion') -> item(0) -> nodeValue));
-		$db -> query("INSERT INTO eventos (nombre, descripcion, inicio, fin, localizacion) VALUES ('$name', '$description', '$dateStart', '$dateEnd', '$localization')");
-		// TODO Calculate ecoQuality, update event with ecoQuality and add to eventos_categorias table
+		$query = $db -> query("SELECT COUNT(*) AS number FROM eventos WHERE nombre = '$name' AND inicio = '$dateStart' AND fin = '$dateEnd' AND localizacion = '$localization'");
+		if($query -> fetch_object() -> number == 0) {
+			$db -> query("INSERT INTO eventos (nombre, descripcion, inicio, fin, localizacion) VALUES ('$name', '$description', '$dateStart', '$dateEnd', '$localization')");
+			$id = $db -> query("SELECT id FROM eventos WHERE nombre = '$name'") -> fetch_object() -> id;
+			$catEco = array();
+			foreach ($event -> getElementsByTagName('categoria') as $category) {
+				$catName = $db -> real_escape_string($category -> nodeValue);
+				$catQuery = $db -> query("SELECT id, puntuacion FROM categorias WHERE nombre = '$catName'");
+				$cat = $catQuery -> fetch_object();
+				array_push($catEco, $cat -> puntuacion);
+				$catId = $cat -> id;
+				$db -> query("INSERT INTO eventos_categorias (categoria_id, evento_id) VALUES ('$catId', '$id')");
+			}
+			if(count($catEco) > 0) {
+				$ecoQuality = array_sum($catEco) / count($catEco);
+				$db -> query("UPDATE eventos SET puntuacion = '$ecoQuality' WHERE id = '$id'");
+			}
+		}
 	}
 }
 ?>
