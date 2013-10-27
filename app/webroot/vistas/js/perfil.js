@@ -13,8 +13,8 @@ function dibujarGraficos() {
 	];
 	
 	opciones.legend.show = false;
-	opciones.margins = [10, 5, 10, 5];
-	opciones.xAxis.values = ["Ene", "Feb", "Mar"];
+	opciones.margins = [10, 5, 10];
+	opciones.xAxis.values = ["Dic 2012", "Sep 2013"];
 	opciones.yAxis.title = "Pelayinos";
 	opciones.serieColours = ["#01A9DB"];
 	

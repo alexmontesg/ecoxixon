@@ -1,14 +1,3 @@
-
-<!-- <p>Esta es la página de incio</p>
-<div id="div_login_inicio">
-	<?php
-	if(!is_null($user)){
-		echo $this->element("users/box_logged");
-	}else{
-		echo $this->element("users/login");
-	}
-	?>
-</div> -->
 <div class="contenido">
 <header>
 				<nav>
@@ -42,133 +31,24 @@
 		¿Nos ayudas?</p>
 	<h3>Eventos</h3>
 	<?php if(isset($eventos) && !empty($eventos)){ ?>
-		<?php foreach($eventos as $e){ ?>
-		<?php } ?>
+		<table class="eventos pages">
+			<tbody>
+				<?php $caracteres=300; ?>
+				<?php foreach($eventos as $e){ ?>
+				<tr>
+					<td class="categoria class_cat_<?php echo $e['Categoria'][0]['id']; ?>"><?php echo utf8_encode($e['Categoria'][0]['name']); ?></td>
+					<td class="descripcion">
+					<?php
+					echo substr(utf8_encode($e['Evento']['descripcion']), 0, $caracteres); 
+					echo (strlen($e['Evento']['descripcion'])>$caracteres)?"...":"";
+					?>
+					</td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
 	<?php } ?>
-	<table class="eventos pages">
-		<tbody>
-			<tr>
-				<td class="categoria eco">eco</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria deporte">dep</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria arte">arte</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria cultura">cul</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria eco">eco</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria deporte">dep</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria arte">arte</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria cultura">cul</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria eco">eco</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria deporte">dep</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria arte">arte</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria cultura">cul</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria eco">eco</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria deporte">dep</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria arte">arte</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria cultura">cul</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria eco">eco</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria deporte">dep</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria arte">arte</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-			<tr>
-				<td class="categoria cultura">cul</td>
-				<td class="descripcion">Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed auctor, velit in tristique mollis, enim ipsum
-					iaculis erat.</td>
-			</tr>
-		</tbody>
-	</table>
+			
 	<h3>¿Por qué ser verde?</h3>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 		auctor, velit in tristique mollis, enim ipsum iaculis erat, in
@@ -177,28 +57,24 @@
 	<div id="grafica1" class="grafica"></div>
 	<div class="mapa">Mapa de Google Maps</div>
 </div>
-<footer>
-	            <div class="columna festival">
-	            	<a href="http://www.fundacionctic.org/odlabgijon" target="_blank">
-	            		<?php echo $this->Html->image("festival.png"); ?>
-	            	</a>
-	            </div>
-	            <div class="columna">
-	            	<span>Agradecimientos</span>
-	            	<br />
-	            	<br />
-	            	<a class="institucion" href="http://www.fundacionctic.org" target="_blank">
-	            		<?php echo $this->Html->image("ctic.png"); ?>
-	            	</a>
-	            	<a class="institucion" href="http://www.gijon.es" target="_blank">
-	            		<?php echo $this->Html->image("ayuntamiento.png"); ?>
-	            	</a>
-	            </div>
-	            <div class="columna logo">
-	            	<?php echo $this->Html->image("logo.png"); ?>
-	            	Idea original de alguien
-	            </div>
-			</footer>
+	<footer>
+		<div class="columna festival">
+			<a href="http://www.fundacionctic.org/odlabgijon" target="_blank">
+				<?php echo $this->Html->image("festival.png"); ?>
+			</a>
+		</div>
+		<div class="columna">
+			<span>Agradecimientos</span> <br /> <br /> <a class="institucion"
+				href="http://www.fundacionctic.org" target="_blank"> <?php echo $this->Html->image("ctic.png"); ?>
+			</a> <a class="institucion" href="http://www.gijon.es" target="_blank">
+				<?php echo $this->Html->image("ayuntamiento.png"); ?>
+			</a>
+		</div>
+		<div class="columna logo">
+			<?php echo $this->Html->image("logo.png"); ?>
+			Idea original de alguien
+		</div>
+	</footer>
 </div>
 <?php
 		echo $this->Html->script("richTable");
