@@ -41,6 +41,12 @@ class AppController extends Controller {
 	);
 	
 	public function beforeFilter() {
+		if($this->Auth->loggedIn()){
+			$this->set('user', $this->Auth->user());
+			$this->set("logeado", true);
+		}else{
+			$this->set("logeado", false);
+		}
 		$this->Auth->allow('index');
 	}
 }

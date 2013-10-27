@@ -1,11 +1,6 @@
 <div class="contenido formulario" id="contenido">
 	<header>
-		<nav>
-			<?php echo $this->Html->link("Registrarse", "/users/add", 
-						array("class"=>"registro", "title"=>"Registrarse")); ?>
-			<?php echo $this->Html->link("Entrar", "/users/login", 
-						array("class"=>"entrar", "title"=>"Entrar")); ?>
-		</nav>
+		<?php echo $this->element("menu"); ?>
 		<a href="/ecoxixon" class="volver" title="Volver a Inicio"><h1><span class="verde">eco</span>Xixón</h1></a>
 	</header>
 	<h3>Crear nuevo usuario</h3>

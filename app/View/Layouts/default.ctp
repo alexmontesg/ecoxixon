@@ -10,7 +10,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('estilo');
+		echo $this->Html->css(array('estilo', 'categorias'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

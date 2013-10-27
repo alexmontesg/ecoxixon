@@ -7,11 +7,11 @@ function dibujarGraficos() {
 	
 	opciones.series = [
 		{
-	        name: "Primero",
+	        name: "Pelayín",
 	        values: [99.80, 68]
 	    },
 	    {  
-	    	name: "Segundo",
+	    	name: "María",
 	     	values: [99, 89]
 	    }
 	];

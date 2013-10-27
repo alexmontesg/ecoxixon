@@ -54,7 +54,6 @@ class PagesController extends AppController {
 	public function display() {
 		$path = func_get_args();
 		
-		$this->set('user', $this->Auth->user());
 		$this->set("eventos", $this->requestAction("/eventos/getAllLimit/20"));
 
 		$count = count($path);
