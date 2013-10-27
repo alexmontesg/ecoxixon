@@ -20,7 +20,7 @@
 					</p>
 				</div>
 				<div class="puntos">
-					<img class="pelayin" src="img/pelayin.png" alt="" /> 
+					<?php echo $this->Html->image("pelayin.png", array("class"=>"pelayin")); ?>
 					<p id="mis-puntos" class="mis-puntos">350 Pelayinos</p>
 				</div>
 				<br />

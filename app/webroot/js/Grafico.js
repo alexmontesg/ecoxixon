@@ -6,7 +6,7 @@ var Grafico = {
 			xAxis: {
 				"font-family": "'Josefin Sans', sans-serif",
 				"font-size": "0.8em",
-				values: ["Ene", "Feb"],
+				values: ["Sep", "Oct"],
 				title: "",
 			},
 			yAxis: {
