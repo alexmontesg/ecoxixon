@@ -16,6 +16,7 @@
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script type="text/javascript">var raiz='<?php echo $this->webroot; ?>';</script>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Finger+Paint' rel='stylesheet' type='text/css'>
 </head>
 <body>
