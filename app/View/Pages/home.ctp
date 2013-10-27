@@ -41,6 +41,10 @@
 		vulputate tristique. Nulla sit amet leo non risus luctus imperdiet.
 		¿Nos ayudas?</p>
 	<h3>Eventos</h3>
+	<?php if(isset($eventos) && !empty($eventos)){ ?>
+		<?php foreach($eventos as $e){ ?>
+		<?php } ?>
+	<?php } ?>
 	<table class="eventos pages">
 		<tbody>
 			<tr>

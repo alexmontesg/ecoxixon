@@ -82,6 +82,6 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 		
-		$this->set("eventos", $this->requestAction("/eventos/getAll"));
+		$this->set("eventos", $this->requestAction("/eventos/getAllLimit/5"));
 	}
 }
