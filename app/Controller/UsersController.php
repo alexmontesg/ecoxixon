@@ -16,6 +16,7 @@ class UsersController extends AppController{
 			throw new NotFoundException(__('Invalid user'));
 		}
 		$this->set('user', $this->User->read(null, $id));
+		$this->set("title_for_layout", "ecoxixón - Perfil");
 	}
 	
 	public function login() {
@@ -26,6 +27,7 @@ class UsersController extends AppController{
 			}
 			$this->Session->setFlash(__('Invalid username or password, try again'));
 		}
+		$this->set("title_for_layout", "ecoxixón - Inicio sesión");
 	}
 	
 	public function logout() {
@@ -41,6 +43,7 @@ class UsersController extends AppController{
 			}
 			$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 		}
+		$this->set("title_for_layout", "ecoxixón - Registro usuario");
 	}
 	
 // 	public function edit($id = null) {
