@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Finger+Paint' rel='stylesheet' type='text/css'>
+		<title>ecoXixón</title>
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen"></link>
+	</head>
+	<body>
+		<canvas id="fondo" width="400px" height="400px"></canvas>
+		<div class="contenido formulario" id="contenido">
+			<header>
+				<nav>
+					<a class="registro" href="registro.html" title="Registrarse">Registrarse</a>
+					<a class="entrar" href="sesion.html" title="Entrar">Entrar</a>
+				</nav>
+				<a href="index.html" class="volver" title="Volver a Inicio"><h1><span class="verde">eco</span>Xixón</h1></a>
+			</header>
+			<div class="cuerpo">
+				<h3>Crear nuevo usuario</h3>
+				<form>
+					<label for="nombre">Nombre</label>
+					<input id="nombre" type="text" placeholder="Pelayín Peláyez" />
+					<label for="correo">Correo electrónico</label>
+					<input id="correo" type="text" placeholder="pelayin@exoxixon.es" />
+					<label for="clave">Contraseña</label>
+					<input id="clave" type="password" />
+				</form>
+				<p>
+					Si ya tienes cuenta, inicia sesión <a href="sesion.html" title="Iniciar sesión">aquí</a>
+				</p>
+			</div>
+		</div>
+		<script src="js/nubes.js"></script>
+		<script src="js/formulario.js"></script>
+	</body>
+</html>
