@@ -1,0 +1,462 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+@media all and (min-width: 45em) {
+	body {
+		background-color: #37544c;
+	}
+}
+
+#fondo
+{
+	display: none;
+	position: fixed;
+	z-index: -1;
+}
+
+@media all and (min-width: 45em) {
+	#fondo {
+		display: block;
+	}
+}
+
+header {
+	background-color: #fff;
+	color: #1b7f79;
+}
+
+header nav {
+	float: right;
+	width: 40%;
+	color: #1b7f79;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	overflow: auto;
+	clear: both;
+}
+
+@media all and (min-width: 25em) {
+	header nav {
+		width: 8em;
+	}
+}
+
+@media all and (min-width: 35em) {
+	header div {
+		padding: 0.5em 1.5em;
+	}
+	
+	header nav {
+		padding: 0.5em 1.5em 0.5em 1.5em;
+	}
+}
+
+@media all and (min-width: 45em) {
+	header div {
+		padding: 0.5em 2.5em;
+	}
+	
+	header nav {
+		padding: 0.5em 2.5em 0.5em 2.5em;
+	}
+}
+
+header nav.centro {
+	text-align: center;
+}
+
+header nav a {
+	text-decoration: none;
+	color: #333;
+}
+
+header nav a.registro {
+	float: left;
+}
+
+header nav a.entrar {
+	float: right;
+}
+
+header img.nube {
+	float: right;
+	width: 35%;
+	margin: 1em 0.5em 0 0;
+}
+
+@media all and (min-width: 25em) {
+	header img.nube {
+		width: 8em;
+	}
+}
+
+@media all and (min-width: 35em) {
+	header img.nube {
+		margin-right: 1.2em;
+	}
+}
+
+@media all and (min-width: 45em) {
+	header img.nube {
+		margin-right: 2.2em;
+	}
+}
+
+footer {
+	padding: 1.5em 0.5em 2em 0.5em;
+	background-color: #333;
+	color: #fff;
+	font-size: 0.8em;
+	margin-top: 2em;
+	overflow: auto;
+}
+
+@media all and (min-width: 35em) {
+	footer {
+		padding: 1.5em 1.8em 2em 1.8em;
+	}
+}
+
+@media all and (min-width: 45em) {
+	footer {
+		padding: 1.5em 3em 2em 3em;
+	}
+}
+
+footer div.columna {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+footer div.columna img {
+	display: block;
+	width: 90%;
+	margin: 0 auto 0.5em auto;
+}
+
+footer div.festival {
+	padding-top: 2em;
+}
+
+footer div.logo {
+	padding-top: 1.5em;
+}
+
+footer div.logo img {
+	width: 70%;
+}
+
+@media all and (min-width: 35em) {
+	footer div.columna img {
+		width: 10em;
+	}
+	
+	footer div.logo img {
+		width: 8em;
+	}
+}
+
+div.contenido {
+	background-color: #fff;
+}
+
+@media all and (min-width: 45em) {
+	div.contenido {
+		width: 80%;
+		margin: 0 auto;
+		box-shadow: 0 0.1em 0.2em #333;
+	}
+}
+
+@media all and (min-width: 55em) {
+	div.contenido {
+		width: 70%;
+	}
+}
+
+div.cuerpo {
+	padding: 0 0.5em;
+	overflow: hidden;
+	clear: both;
+}
+
+@media all and (min-width: 35em) {
+	div.cuerpo {
+		padding: 0 1.5em;
+	}
+}
+
+@media all and (min-width: 45em) {
+	div.cuerpo {
+		padding: 0 2.5em;
+	}
+}
+
+h1, h2 {
+	font-family: 'Finger Paint', cursive;
+	font-weight: 100;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.2em;
+	letter-spacing: 0.1em;
+	color: #444;
+	padding: 0.2em 0.5em 0 0.4em;
+}
+
+@media all and (min-width: 35em) {
+	h1 {
+		margin-left: 1em;
+	}
+}
+
+@media all and (min-width: 45em) {
+	h1 {
+		margin-left: 1.8em;
+		padding-left: 0;
+	}
+}
+
+span.verde {
+	color: #448a86;
+}
+
+h1 a {
+	text-decoration: none;
+	color: #fff;
+}
+
+h2 {
+	font-size: 1em;
+	letter-spacing: 0.2em;
+}
+
+h3 {
+	font-weight: 100;
+}
+
+div.letrero {
+	font-family: 'Finger Paint', cursive;
+	font-size: 0.8em;
+	clear: both;
+	background-color: #5ab8b1;
+	color: #fff;
+	overflow: auto;
+	padding: 1em 0;
+}
+
+div.letrero div.columna {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+div.letrero img.circulo {
+	background-color: #fff;
+	width: 4.5em;
+	height: 4.5em;
+	border-radius: 2.25em;
+	display: block;
+	margin: 0.5em auto 1em auto;
+}
+
+@media all and (min-width: 35em) {
+	div.letrero div.columna {
+		font-size: 1.2em;
+	}
+
+	div.letrero img.circulo {
+		width: 5.5em;
+		height: 5.5em;
+		border-radius: 2.75em;	
+	}
+}
+
+@media all and (min-width: 45em) {
+	div.letrero img.circulo {
+		width: 6.5em;
+		height: 6.5em;
+		border-radius: 3.25em;	
+	}
+}	
+
+/* Eventos */
+
+td {
+	border-bottom: 0.4em solid #fff;
+}
+
+td.categoria {
+	width: 22%;
+	text-align: center;
+	color: #fff;
+	border-right: 0.4em solid #fff;
+}
+
+@media all and (min-width: 25em) {
+	td.categoria {
+		width: 3em;
+		height: 3em;
+	}
+}
+
+td.eco {
+	background-color: #39c984;
+}
+
+td.deporte {
+	background-color: #1b96e1;
+}
+
+td.arte {
+	background-color: #e8ce06;
+	color: #333;
+}
+
+td.cultura {
+	background-color: #ec3b5b;
+}
+
+td.fecha {
+	width: 30%;
+	text-align: center;
+}
+
+/* Table pages */
+
+table.pages tFoot {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+table.pages tFoot a {
+	margin-left: 1em;
+	display: inline-block;
+	width: 2em;
+	height: 1.5em;
+	padding-top: 0.5em;
+	border-radius: 1em;
+	background-color: #aaa;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+table.pages tFoot a.selected {
+	background-color: #07936e;
+}
+
+table.pages tFoot a.not-number {
+	background-color: #fff;
+	border: none;
+	color: #333;
+	width: auto;
+	height: auto;
+}
+
+table.pages tFoot a.disabled {
+	color: #aaa;
+	pointer-events: none;
+}
+
+/* Gráficas */
+
+div.grafica {
+	width: 100%;
+	height: 15em;
+}
+
+/* Mapa */
+
+div.mapa {
+	width: 100%;
+	height: 15em;
+	background-color: #ccc;
+}
+
+/* Formulario */
+
+div.formulario {
+	padding: 0.5em 0;
+}
+
+div.formulario h1 {
+	font-size: 1.4em;
+	padding: -0.1em 0.2em;
+}
+
+div.formulario a.volver {
+	text-decoration: none;
+}
+
+form {
+	margin-right: 0.5em;
+}
+
+form label {
+	display: block;
+}
+
+form input {
+	margin-bottom: 1em;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+/* Perfil */
+
+div.privado {
+	background-color: #5ab8b1;
+	margin: 0.5em 0;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em 0;
+}
+
+h3.nombre {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+img.imagen-perfil {
+	height: 6em;
+	float: left;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+}
+
+div.info {
+	margin-top: 1em;
+	float: left;
+	padding-left: 1em;
+	padding-bottom: 1em;
+}
+
+/* Puntos */
+
+div.puntos {
+	clear: both;
+}
+
+div.puntos img.pelayin {
+	width: 3.5em;
+	float: left;
+	margin-right: 0.5em;
+}
+
+div.puntos p.mis-puntos {
+	font-size: 1.5em;
+	padding-top: 0.7em;
+}
+
+h3.historico {
+	color: #888;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 1.5em;
+}
