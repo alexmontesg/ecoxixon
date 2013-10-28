@@ -4,9 +4,20 @@ class EventosController extends AppController{
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('getAll');
-		$this->Auth->allow('getAllLimit');
+		$this->Auth->allow(array('getAllLimit', 'view'));
 	}
+
+	public function view($id = null) {
+		$this->Evento->id = $id;
+		if (!$this->Evento->exists()) {
+			throw new NotFoundException(__('Evento no válido'));
+		}
+		$this->Evento->recursive = 2;
+		$evento = $this->Evento->read(null, $id);
+		$this->set('evento', $evento);
+		$this->set("title_for_layout", "ecoxixón - Evento ".utf8_encode($evento['Evento']['name']));
+	}
+	
 	public function getAll(){
 		return $this->Evento->find("all");
 	}

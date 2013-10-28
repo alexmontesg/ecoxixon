@@ -4,20 +4,7 @@
 	<?php echo $this->element("menu"); ?>
 	<h1><span class="verde">eco</span>Xixón</h1>
 </header>
-<div class="letrero">
-	<div class="columna">
-		<?php echo $this->Html->image("eco.png", array("class"=>"circulo")); ?>
-		Sé ecológico
-	</div>
-	<div class="columna">
-		<?php echo $this->Html->image("nube.png", array("class"=>"circulo")); ?>
-		Compártelo
-	</div>
-	<div class="columna">
-		<?php echo $this->Html->image("pelayin.png", array("class"=>"circulo")); ?>
-		Gana puntos
-	</div>
-</div>
+<?php echo $this->element("letrero"); ?>
 <div class="cuerpo">
 	<h3>¿Qué es?</h3>
 	<p>Visualización de datos medioambientales de la ciudad de 
@@ -30,7 +17,7 @@ comportamiemtos ecologicos.
 	<?php if(isset($eventos) && !empty($eventos)){ ?>
 		<table class="eventos pages">
 			<tbody>
-				<?php $caracteres=300; ?>
+				<?php $caracteres=200; ?>
 				<?php foreach($eventos as $e){ ?>
 				<tr>
 					<td class="categoria class_cat_<?php echo $e['Categoria'][0]['id']; ?>">
@@ -38,6 +25,9 @@ comportamiemtos ecologicos.
 						
 					</td>
 					<td class="descripcion">
+						<?php echo $this->Html->link(utf8_encode($e['Evento']['name']), 
+							"/eventos/view/".$e['Evento']['id'],
+							array("class"=>"bold", "title"=>"Más información")); ?><br/>
 						<?php
 						echo substr(utf8_encode($e['Evento']['descripcion']), 0, $caracteres); 
 						echo (strlen($e['Evento']['descripcion'])>$caracteres)?"...":"";

@@ -183,6 +183,10 @@ div.cuerpo {
 	clear: both;
 }
 
+div.cuerpo a{
+	color: #000000;
+}
+
 @media all and (min-width: 35em) {
 	div.cuerpo {
 		padding: 0 1.5em;
@@ -463,4 +467,12 @@ h3.historico {
 	text-align: center;
 	margin-bottom: 0;
 	margin-top: 1.5em;
+}
+
+td.descripcion a{
+	color: #000000;
+}
+
+.bold{
+	font-weight: bold;
 }
