@@ -26,6 +26,10 @@
 				</tr>
 			</tbody>
 		</table>
+		<div class="puntos">
+			<?php echo $this->Html->image("pelayin.png", array("class"=>"pelayin")); ?>
+			<p id="mis-puntos" class="mis-puntos"><?php echo round($evento['Evento']['puntuacion'], 2); ?> Pelayinos</p>
+		</div>
 	</div>
 	<footer>
 		<div class="columna festival">
