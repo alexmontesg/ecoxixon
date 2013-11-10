@@ -43,10 +43,21 @@ comportamiemtos ecologicos.
 	<div id="map-canvas" class="mapa">Mapa de Google Maps</div>
 			
 	<h3>¿Por qué ser verde?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-		auctor, velit in tristique mollis, enim ipsum iaculis erat, in
-		facilisis metus neque quis nibh. Proin sit amet augue ac dolor
-		vulputate tristique. Nulla sit amet leo non risus luctus imperdiet.</p>
+	<p>
+	 Afecta a todos los cuerpos planetarios rocosos dotados de atmósfera. 
+	 Este fenómeno evita que la energía recibida constantemente vuelva 
+	 inmediatamente al espacio, produciendo a escala planetaria un efecto 
+	 similar al observado en un invernadero.
+	 El efecto invernadero se está viendo acentuado en la Tierra por la 
+	 emisión de ciertos gases, como el dióxido de carbono y el metano, 
+	 debido a la actividad humana. 
+	 <small><?php echo $this->Html->link("Wikipedia.org", "http://es.wikipedia.org/wiki/Efecto_invernadero", array("title"=>"wikipedia.org", "target"=>"_blank")); ?></small>
+	</p>
+	<p>
+	Las futuras Smart Cities deben ser conscientes de este hecho y realizar una
+	tarea pedagógica con sus ciudadanos con el objetivo de conseguir un futuro
+	sostenible para todos.
+	</p>
 		
 	<h3>Niveles de CO2 en Gijón</h3>
 	<div id="grafica1" class="grafica"></div>
