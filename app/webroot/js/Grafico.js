@@ -3,10 +3,13 @@ var Grafico = {
 		return {
 			style: "border: 1px solid red",
 			margins: [10, 30, 10, 5],
+			valueOnItem: {
+				show: false
+			},
 			xAxis: {
 				"font-family": "'Josefin Sans', sans-serif",
 				"font-size": "0.8em",
-				values: ["Sep", "Oct"],
+				values: ["Ene", "Feb"],
 				title: "",
 			},
 			yAxis: {
@@ -22,12 +25,16 @@ var Grafico = {
 		}
 	},
 
-	dibujar : function (div, tipo, opciones) {
+	dibujar : function (div, tipo, titulo, opciones) {
 		var div = document.getElementById(div);
-		div.innerHTML = "";
-				
+		//div.innerHTML = "";
+		
+		var h4 = document.createElement("h4");
+		div.appendChild(h4);
+		h4.innerHTML = titulo;
+		
 		opciones.width = div.offsetWidth;
-		opciones.height = div.offsetHeight;
+		//opciones.height = div.offsetHeight;
 				
 		switch(tipo) {
 			case "bar":

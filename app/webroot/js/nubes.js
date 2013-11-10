@@ -13,7 +13,7 @@ var dimensiones_fondo = null;
 var dimensiones_nube = { ancho : 230, alto : 54 };
 	
 var imagenes = 	[
-					raiz+'img/nube_2.png'
+					'img/nube_2.png'
 				];
 				
 var graficos = {};
@@ -99,7 +99,7 @@ function dimensiones_pantalla()
 function generar_nubes()
 {
 	var nubes = [];
-	var nube = graficos[raiz+'img/nube_2.png'];
+	var nube = graficos['img/nube_2.png'];
 	
 	for (var i = 0; i < num_nubes; i++)
 	{

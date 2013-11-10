@@ -38,16 +38,19 @@ comportamiemtos ecologicos.
 			</tbody>
 		</table>
 	<?php } ?>
+	
+	<h3>Eventos en tu ciudad</h3>
+	<div id="map-canvas" class="mapa">Mapa de Google Maps</div>
 			
 	<h3>¿Por qué ser verde?</h3>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
 		auctor, velit in tristique mollis, enim ipsum iaculis erat, in
 		facilisis metus neque quis nibh. Proin sit amet augue ac dolor
 		vulputate tristique. Nulla sit amet leo non risus luctus imperdiet.</p>
+		
+	<h3>Niveles de CO2 en Gijón</h3>
 	<div id="grafica1" class="grafica"></div>
 	
-	<h3>Eventos en tu ciudad</h3>
-	<div id="map-canvas" class="mapa">Mapa de Google Maps</div>
 </div>
 	<footer>
 		<div class="columna festival">
@@ -69,6 +72,7 @@ comportamiemtos ecologicos.
 	</footer>
 </div>
 <?php
+		echo $this->Html->script("datos");
 		echo $this->Html->script("richTable");
 		echo $this->Html->script("jGraf.min");
 		echo $this->Html->script("Grafico");

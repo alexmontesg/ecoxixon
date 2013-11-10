@@ -61,7 +61,7 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
+	public $local = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -70,6 +70,16 @@ class DATABASE_CONFIG {
 		'database' => 'ecoxixon',
 		'prefix' => '',
 		//'encoding' => 'utf8',
+	);
+	
+	var $produccion = array(
+			'datasource' => 'Database/Mysql',
+			'persistent' => false,
+			'host' => 'localhost',
+			'login' => 'MFL19_ecoxixon',
+			'password' => '3C0X1x0n_',
+			'database' => 'lukos_org_ecoxixon',
+			'prefix' => '',
 	);
 
 	public $test = array(
@@ -83,4 +93,18 @@ class DATABASE_CONFIG {
 		//'encoding' => 'utf8',
 	);
 	
+	var $default = array();
+	
+	/**
+	 * @see http://labs.iamkoa.net/2007/10/29/easy-dynamic-database-connection-in-cakephp/
+	*/
+	function __construct() {
+		$this->default = $this->local;
+		//$this->default = $this->produccion;
+	}
+	
+	#php 4 compatibility
+	function DATABASE_CONFIG() {
+		$this->__construct();
+	}
 }

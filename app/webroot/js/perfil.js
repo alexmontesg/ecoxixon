@@ -7,14 +7,14 @@ function dibujarGraficos() {
 	
 	opciones.series = [
 		{
-	        name: "Usuario",
-	        values: [10, 58]
+	        name: "Primero",
+	        values: [10, 58, 30]
 	    },
 	];
 	
 	opciones.legend.show = false;
 	opciones.margins = [10, 5, 10, 5];
-	opciones.xAxis.values = ["Dic 2012", "Sep 2013"];
+	opciones.xAxis.values = ["Ene", "Feb", "Mar"];
 	opciones.yAxis.title = "Pelayinos";
 	opciones.serieColours = ["#01A9DB"];
 	
