@@ -17,6 +17,7 @@ function dibujarGraficos() {
 	opciones.xAxis.values = ["Ene", "Feb", "Mar"];
 	opciones.yAxis.title = "Pelayinos";
 	opciones.serieColours = ["#01A9DB"];
+	opciones.height = document.getElementById("historico").offsetHeight;
 	
-	Grafico.dibujar("historico", "line", opciones);
+	Grafico.dibujar("historico", "line", "", opciones);
 }

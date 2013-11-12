@@ -37,6 +37,10 @@ header nav {
 	clear: both;
 }
 
+header a.volver {
+	text-decoration: none;
+}
+
 @media all and (min-width: 25em) {
 	header nav {
 		width: 8em;

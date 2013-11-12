@@ -76,9 +76,9 @@ class DATABASE_CONFIG {
 			'datasource' => 'Database/Mysql',
 			'persistent' => false,
 			'host' => 'localhost',
-			'login' => 'MFL19_ecoxixon',
+			'login' => 'juancast_exixon',
 			'password' => '3C0X1x0n_',
-			'database' => 'lukos_org_ecoxixon',
+			'database' => 'juancast_ecoxixon',
 			'prefix' => '',
 	);
 
@@ -99,8 +99,8 @@ class DATABASE_CONFIG {
 	 * @see http://labs.iamkoa.net/2007/10/29/easy-dynamic-database-connection-in-cakephp/
 	*/
 	function __construct() {
-		$this->default = $this->local;
-		//$this->default = $this->produccion;
+		//$this->default = $this->local;
+		$this->default = $this->produccion;
 	}
 	
 	#php 4 compatibility

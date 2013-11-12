@@ -29,9 +29,11 @@ var Grafico = {
 		var div = document.getElementById(div);
 		//div.innerHTML = "";
 		
-		var h4 = document.createElement("h4");
-		div.appendChild(h4);
-		h4.innerHTML = titulo;
+		if (titulo != "") {
+			var h4 = document.createElement("h4");
+			div.appendChild(h4);
+			h4.innerHTML = titulo;
+		}
 		
 		opciones.width = div.offsetWidth;
 		//opciones.height = div.offsetHeight;
