@@ -1,7 +1,7 @@
 <div class="contenido formulario" id="contenido">
 	<header>
 		<?php echo $this->element("menu"); ?>
-		<a href="/ecoxixon" class="volver" title="Volver a Inicio"><h1>
+		<a href="/" class="volver" title="Volver a Inicio"><h1>
 				<span class="verde">eco</span>Xixón
 			</h1></a>
 	</header>

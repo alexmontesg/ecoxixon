@@ -18,6 +18,7 @@
 	?>
 	<script type="text/javascript">var raiz='<?php echo $this->webroot; ?>';</script>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Finger+Paint' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="/favicon.ico" />
 </head>
 <body>
 	<canvas id="fondo" width="400px" height="400px"></canvas>

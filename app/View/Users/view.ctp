@@ -3,7 +3,7 @@
 				<nav>
 					<?php echo $this->Html->link("Cerrar sesión", "/Users/logout", array("class"=>"entrar")); ?>
 				</nav>
-				<a href="/ecoxixon" class="volver" title="Volver a Inicio"><h1><span class="verde">eco</span>Xixón</h1></a>
+				<a href="/" class="volver" title="Volver a Inicio"><h1><span class="verde">eco</span>Xixón</h1></a>
 			</header>
 			<div class="privado">
 				Zona Privada
